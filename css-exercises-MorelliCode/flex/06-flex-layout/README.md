@@ -13,10 +13,18 @@ Flexbox is useful for laying out entire pages as well as the smaller components 
 ### Self Check
 
 - The header is at the top of the page, the footer is at the bottom, and they stay in place if you resize your screen.
+  - Yes. By using justify-content space-between
 - The header and footer have padding.
+  - Yes. Padding to the right and left
 - The links in the header and footer are pushed to either side.
+  - Yes. By using justify-content space-between
 - There is space between the links in the header and footer.
+  - Yes. By using gap (16px)
 - The footer has a light gray background (`#eeeeee`).
+  - Yes. Although I had to look in this document to have the correct color value
 - The logo, input and buttons are centered in the screen.
+  - Yes. By setting flow-direction to column and centering everything
 - The buttons have an appropriate amount of padding.
+  - Yes. Although "appropriate" is quite the loose term
 - There is space between the logo, input and buttons.
+  - Yes. They are not crushed
