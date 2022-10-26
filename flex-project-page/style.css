@@ -43,6 +43,7 @@ body {
 
 .cards{
     display: flex;
+    gap: 24px
 }
 
 .quote {
@@ -55,11 +56,30 @@ body {
 
 .call-action{
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
     padding: 24px 0;
-    gap: 24px;
+}
+
+.action-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 24px 52px;
+}
+
+.action-text{
+    flex: 2 1 auto
+}
+
+.action-text p{
+    margin: 0;
+}
+
+.action-button {
+    flex: 1 1 auto;
+    
 }
 
 .footer {
