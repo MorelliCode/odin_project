@@ -7,7 +7,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space space-between;
+    justify-content: space-between;
 }
 
 .header, .footer {
@@ -51,7 +51,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 24px 0;
-    gap: 24px;
+    
+}
+
+.author-quote {
+    text-align: end;
 }
 
 .call-action{
