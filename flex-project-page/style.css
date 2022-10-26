@@ -58,6 +58,7 @@ body {
     color: #e5e7eb;
     border-radius: 8px;
     border-style: none;
+    padding: 8px;
 }
 
 .hero-main-text {
@@ -139,6 +140,7 @@ body {
     padding: 24px 52px;
     background-color: #3882f6;
     color: #e5e7eb;
+    border-radius: 8px;
 }
 
 .action-text{
@@ -154,7 +156,8 @@ body {
 }
 
 .action-button {
-    flex: 1 1 auto;    
+    flex: 1 1 auto;
+        
 }
 
 .action-button button {
@@ -163,6 +166,7 @@ body {
     color: #e5e7eb;
     border-style: solid;
     border-color: #e5e7eb;
+    padding: 8px;
 }
 
 .footer {
