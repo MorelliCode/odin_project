@@ -36,7 +36,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 24px 10%;
-    gap: 24px;
+    gap: 36px;
     background: #1f2937;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .hero-secondary-text p {
-    margin: 0%;
+    margin: 5% 0;
 }
 
 .gallery {
