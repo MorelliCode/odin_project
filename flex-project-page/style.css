@@ -98,9 +98,18 @@ body {
     flex-wrap: wrap;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 200px;
+    align-items: center;
+    text-align: center;
+}
+
 .card > img {
     max-height: 200px;
-    border-radius: 12px;
+    border: #3882f6 solid;
+    border-radius: 16px;
 }
 
 .card > p {
