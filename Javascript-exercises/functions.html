@@ -15,15 +15,14 @@
             return a*b;
         }
         function capitalize(string = "hElLo"){
-            let fstLetter = string[0]
             let long = string.length
             let lower = string.toLowerCase()
-            return (fstLetter.toUpperCase() + lower.slice(1-long, long))
+            return (string[0].toUpperCase() + lower.slice(1-long, long))
         }
 
         console.log(add7(15))
         console.log(multiply(5, 6))
-        console.log(capitalize("tHe QUICK fox"))
+        console.log(capitalize("tHe SLOW fox"))
 
     </script>
 </body>
