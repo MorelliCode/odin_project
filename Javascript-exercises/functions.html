@@ -19,11 +19,15 @@
             let lower = string.toLowerCase()
             return (string[0].toUpperCase() + lower.slice(1-long, long))
         }
+        function lastLetter (string = "Rythm"){
+            return string.slice(string.length - 1, string.length - 0)
+        }
+
 
         console.log(add7(15))
         console.log(multiply(5, 6))
         console.log(capitalize("tHe SLOW fox"))
-
+        console.log(lastLetter())
     </script>
 </body>
 </html>
