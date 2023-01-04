@@ -3,8 +3,26 @@ console.log(getComputerChoice());
 
 let playerSelection = "SCISSORS";
 let playerScore = 0;
-const computerSelection = getComputerChoice();
+let computerSelection = getComputerChoice();
 console.log(playerSelection);
+
+console.log(game());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getComputerChoice(){
     let computerPlay = Math.floor(Math.random() * 10);
@@ -55,12 +73,9 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
-console.log(playerScore);
-
 function game(){
-    for(let i = 0; i<5; i++){
-        playRound(playerSelection, computerSelection);
+    for(let i = 0; i<5; ++i){
+        console.log(playRound(playerSelection, getComputerChoice()));
     }
     if (playerScore > 2) {
         return "You're the champion! You won " +playerScore +" out of 5 games!";      
