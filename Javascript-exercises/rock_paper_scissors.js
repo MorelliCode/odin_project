@@ -9,21 +9,6 @@ console.log(playerSelection);
 console.log(game());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function getComputerChoice(){
     let computerPlay = Math.floor(Math.random() * 10);
     let result = "";
@@ -75,6 +60,7 @@ function playRound(playerSelection, computerSelection){
 
 function game(){
     for(let i = 0; i<5; ++i){
+        playerSelection = window.prompt('Rock, Paper, or Scissors?', 'rock')
         console.log(playRound(playerSelection, getComputerChoice()));
     }
     if (playerScore > 2) {
