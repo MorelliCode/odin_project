@@ -1,8 +1,7 @@
 const removeFromArray = function() {
     let newArray = arguments[0];
-    let paramLength= arguments.length;
-    for (i=1 ; i <= arguments.length; i++){
-        for (j=0 ; j<newArray.length; j++){
+    for ( i = 1 ; i <= arguments.length; i++ ){
+        for ( j = 0 ; j < newArray.length; j++ ){
             if (newArray[j] === arguments[i])
                 newArray.splice(j, 1);
         }
