@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+body {
+    display: flex;
+}
+
+.background_image {
+    height: 100vh;
+}
+
+.logo {
+    background-image: url(blue_red_zippers.jpg);
+}
+
