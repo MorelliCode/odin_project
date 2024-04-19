@@ -18,14 +18,14 @@ If you use the tools in the Advanced Grid Properties lesson you should be able t
 ![desired outcome stretched](./desired-outcome-stretched.png)
 
 ### Self Check
-- The container element has two columns
-- The container's second column is 4 times larger than the first column
-- The container element has a gap of 4px
-- The header element has two columns
-- The `ul` inside the menu element contains another grid
-- The `ul` inside the nav element contains another grid
-- The sidebar element has a gap of 50px
-- The text elements in the sidebar are centered with grid
+- The container element has two columns - done
+- The container's second column is 4 times larger than the first column - done
+- The container element has a gap of 4px - done
+- The header element has two columns - done
+- The `ul` inside the menu element contains another grid - done
+- The `ul` inside the nav element contains another grid - done
+- The sidebar element has a gap of 50px - done
+- The text elements in the sidebar are centered with grid 
 - The article element should set grid columns using `repeat` along with the `auto-fit` and `minmax` properties
 - The article columns should have a minimum value of 250px and a maximum of 1fr unit
 - The article element has a gap of 15px

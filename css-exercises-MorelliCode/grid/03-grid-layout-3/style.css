@@ -89,3 +89,35 @@
   font-size: 13px;
   font-weight: normal;  
 }
+
+/* SOLUTION BELOW */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-column: span 2;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+.sidebar {
+  display: grid;
+  grid-row: 2 / span 2;
+  gap: 50px;
+}
