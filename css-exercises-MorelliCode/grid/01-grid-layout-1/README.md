@@ -14,11 +14,11 @@ Now it's time to practice the Grid tools we've learned and create a layout that 
 
 ### Self Check
 
-- The gap is 15px
-- The grid has two columns
-- The grid has four rows
-- The second column is three times larger than the first
-- The third row is five times larger than the others
-- The header and footer elements span across both columns
-- The sidebar element only spans across the first column
-- The nav and article elements span across the second column
+- The gap is 15px - done
+- The grid has two columns -done
+- The grid has four rows -done
+- The second column is three times larger than the first - done
+- The third row is five times larger than the others - done
+- The header and footer elements span across both columns - done
+- The sidebar element only spans across the first column - done
+- The nav and article elements span across the second column - done
