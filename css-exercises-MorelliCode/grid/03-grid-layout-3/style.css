@@ -100,9 +100,13 @@
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 2fr; /* this is needed for lining up with the design. But I prefer "1fr 4fr", it's neater */
   grid-column: span 2;
   align-items: center;
+}
+
+.logo {
+  justify-self: start;
 }
 
 .menu ul {
@@ -115,7 +119,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  align-items: center;
 }
 
 
@@ -138,6 +141,10 @@
 
 .card {
   height: 200px;
+}
+
+.card p {
+  padding: 5px;
 }
 
 .footer {
