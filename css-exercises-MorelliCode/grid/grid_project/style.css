@@ -18,6 +18,35 @@ body {
     background-color: #f3e8ff;
 }
 
+.top {
+    display: flex;
+    gap: 20px;
+    padding: 10px 30px;
+}
+
+.top input {
+    flex: 1;
+}
+
+.top img {
+    height: 30px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.display_name {
+    display: flex;
+}
+
+.display_name img {
+    height: 70px;
+}
+
 .sidebar {
     grid-row: 1 / -1;
 
