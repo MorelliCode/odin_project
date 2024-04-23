@@ -49,8 +49,38 @@ body {
 
 .sidebar {
     grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
     background-color: #9333ea;
+}
+
+.sidebar > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.sidebar > div > img {
+    height: 20px;
+    filter: invert(99%) sepia(60%) saturate(2%) hue-rotate(13deg) brightness(109%) contrast(101%);
+}
+
+.sidebar > div > p {
+    color: white;
+    font-weight: bold;
+}
+
+#title_img {
+    height: 40px;
+}
+
+.title p {
+    align-self: center;
+    font-size: larger;
 }
 
 .content {
