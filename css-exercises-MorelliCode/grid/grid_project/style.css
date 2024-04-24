@@ -87,4 +87,55 @@ body {
 
 .content {
     background-color: #e9d5ff;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.right_side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;    
+}
+
+.trending_container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.trending_child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending_child > img {
+    height: 30px;
 }
