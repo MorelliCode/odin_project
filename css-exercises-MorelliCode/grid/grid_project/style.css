@@ -116,6 +116,7 @@ body {
     padding-left: 10px;
 
     background-color: #9333ea;
+    position: relative;
 }
 
 .sidebar > div {
@@ -262,6 +263,7 @@ body {
     background-color: #f3e8ff;
 }
 
+.sidebar,
 .card,
 .bottom,
 .announcements_container,
