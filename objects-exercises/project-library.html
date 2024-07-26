@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="project-library.js"></script>
+    <link rel="stylesheet" href="project-library.css">
     <title>Project: Library</title>
 </head>
 <body>
-    
+
+    <header>
+        <p>Project: Library</p>
+        <button>Add new book</button>
+    </header>
+
+    <dialog open>
+        <p>Add new book</p>
+        <form method="dialog" class="inclusion-form">
+            <div class="form-row">
+                <label for="book-title">Title: </label>
+                <input type="text" name="book-title" id="book-title">
+            </div>
+            <div class="form-row">
+                <label for="book-author">Author: </label>
+                <input type="text" name="book-author" id="book-author">
+            </div>
+            <div class="form-row">
+                <label for="book-pages">Pages: </label>
+                <input type="text" name="book-pages" id="book-pages">
+            </div>
+            <div class="form-row">
+                <label for="book-read">Read?</label>
+                <input type="checkbox" name="book-read" id="book-read">
+            </div>
+            <button class="form-button">Add</button>
+        </form>
+      </dialog>
+      
+    <div class="library">
+
+    </div>
 </body>
 </html>
