@@ -16,7 +16,7 @@ const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
 
 myLibrary.push(theHobbit);
 
-
+renderPage();
 
 
 
@@ -38,7 +38,7 @@ function addBook() {
 }
 
 function renderPage(){
-    document.querySelector(".library").innerHTML = "";
+    libraryElement.innerHTML = "";
 
     myLibrary.forEach(element => {
         const card = document.createElement("div");
@@ -75,7 +75,7 @@ function renderPage(){
         card.appendChild(cardRead);
         card.appendChild(cardToggleBtn);
         card.appendChild(cardRemoveBtn);
-        document.querySelector(".library").appendChild(card);
+        libraryElement.appendChild(card);
         
     });
 
