@@ -97,16 +97,19 @@ function renderPage(){
 
 }
 
+//"Add new book" button opens modal dialog
 addBookBtn.addEventListener("click", () => {
     dialog.showModal();
 })
 
+//"Add" button on dialog adds book info to array, resets the form and closes the dialog
 addFormBtn.addEventListener("click", () => {
     addBook();
     addBookForm.reset();
     dialog.close();
 })
 
+//"Cancel" button on dialog resets the form and closes the dialog
 cancelFormBtn.addEventListener("click", () => {
     addBookForm.reset();
     dialog.close();
