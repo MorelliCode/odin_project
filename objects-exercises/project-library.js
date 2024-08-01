@@ -1,3 +1,5 @@
+let idCounter = 0;
+
 const libraryElement = document.querySelector(".library");
 const addBookBtn = document.querySelector("#newBookBtn");
 const dialog = document.querySelector("dialog");
@@ -8,6 +10,7 @@ const addBookForm = document.querySelector(".inclusion-form");
 const myLibrary = [];
 
 function Book(title, author, numberPages, isRead) {
+    this.bookId = ++idCounter;
     this.title = title;
     this.author = author;
     this.numberPages = numberPages;
@@ -46,53 +49,49 @@ function renderPage(){
     libraryElement.innerHTML = "";
 
     myLibrary.forEach(element => {
+        //create and add class to card
         const card = document.createElement("div");
-        const cardTitle = document.createElement("div");
-        const cardAuthor = document.createElement("div");
-        const cardPages = document.createElement("div");
-        const cardRead = document.createElement("div");
-        const cardToggleBtn = document.createElement("button");
-        const cardRemoveBtn = document.createElement("button");
-
         card.classList.add("card")
+
+        //create, add class, set content, append to card
+        const cardTitle = document.createElement("div");
         cardTitle.classList.add("card-title")
-        cardAuthor.classList.add("card-author")
-        cardPages.classList.add("card-pages")
-        cardRead.classList.add("card-read");
-
         cardTitle.textContent = element.title;
+        card.appendChild(cardTitle);
+
+        const cardAuthor = document.createElement("div");
+        cardAuthor.classList.add("card-author")
         cardAuthor.textContent = element.author;
+        card.appendChild(cardAuthor);
+
+        const cardPages = document.createElement("div");
+        cardPages.classList.add("card-pages")
         cardPages.textContent = element.numberPages + " pages";
-        
-        if (element.isRead == true) {
-            cardRead.textContent = "Read";
-        }
-        if (element.isRead == false) {
-            cardRead.textContent = "Unread";
-        }
+        card.appendChild(cardPages);
 
+        const cardRead = document.createElement("div");
+        cardRead.classList.add("card-read");
         cardToggleBtn.textContent = "Toggle read";
+        if (element.isRead == true) {cardRead.textContent = "Read";}
+        if (element.isRead == false) {cardRead.textContent = "Unread";}        
+        card.appendChild(cardRead);
 
+        const cardToggleBtn = document.createElement("button");
         cardToggleBtn.addEventListener("click", () => {
             element.toggleRead();
             renderPage();
         });
-
+        card.appendChild(cardToggleBtn);
+        
+        const cardRemoveBtn = document.createElement("button");
         cardRemoveBtn.textContent = "Remove";
-
         cardRemoveBtn.addEventListener("click", () => {
             myLibrary.splice(myLibrary.indexOf(element, 1));
             renderPage();
         })
-
-        card.appendChild(cardTitle);
-        card.appendChild(cardAuthor);
-        card.appendChild(cardPages);
-        card.appendChild(cardRead);
-        card.appendChild(cardToggleBtn);
         card.appendChild(cardRemoveBtn);
-        libraryElement.appendChild(card);
         
+        libraryElement.appendChild(card);
     });
 
 }
