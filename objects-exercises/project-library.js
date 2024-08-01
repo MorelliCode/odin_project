@@ -49,9 +49,10 @@ function renderPage(){
     libraryElement.innerHTML = "";
 
     myLibrary.forEach(element => {
-        //create and add class to card
+        //create and add classes to card: card and the unique id
         const card = document.createElement("div");
         card.classList.add("card")
+        card.classList.add(element.bookId)
 
         //create, add class, set content, append to card
         const cardTitle = document.createElement("div");
@@ -71,12 +72,12 @@ function renderPage(){
 
         const cardRead = document.createElement("div");
         cardRead.classList.add("card-read");
-        cardToggleBtn.textContent = "Toggle read";
         if (element.isRead == true) {cardRead.textContent = "Read";}
         if (element.isRead == false) {cardRead.textContent = "Unread";}        
         card.appendChild(cardRead);
-
+        
         const cardToggleBtn = document.createElement("button");
+        cardToggleBtn.textContent = "Toggle read";
         cardToggleBtn.addEventListener("click", () => {
             element.toggleRead();
             renderPage();
