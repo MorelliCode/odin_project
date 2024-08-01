@@ -1,5 +1,3 @@
-let idCounter = 0;
-
 const libraryElement = document.querySelector(".library");
 const addBookBtn = document.querySelector("#newBookBtn");
 const dialog = document.querySelector("dialog");
@@ -10,7 +8,6 @@ const addBookForm = document.querySelector(".inclusion-form");
 const myLibrary = [];
 
 function Book(title, author, numberPages, isRead) {
-    this.bookId = ++idCounter;
     this.title = title;
     this.author = author;
     this.numberPages = numberPages;
@@ -52,7 +49,6 @@ function renderPage(){
         //create and add classes to card: card and the unique id
         const card = document.createElement("div");
         card.classList.add("card");
-        card.dataset.id = element.bookId;
 
         //create, add class, set content, append to card
         const cardTitle = document.createElement("div");
