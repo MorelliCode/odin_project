@@ -59,15 +59,26 @@ function renderPage(){
         cardAuthor.textContent = element.author;
         cardPages.textContent = element.numberPages;
         
-        if (element.isRead = true) {
+        if (element.isRead == true) {
             cardRead.textContent = "Read";
         }
-        if (element.isRead = false) {
+        if (element.isRead == false) {
             cardRead.textContent = "Unread";
         }
 
         cardToggleBtn.textContent = "Toggle read";
+
+        cardToggleBtn.addEventListener("click", () => {
+            element.toggleRead();
+            renderPage();
+        });
+
         cardRemoveBtn.textContent = "Remove";
+
+        cardRemoveBtn.addEventListener("click", () => {
+            myLibrary.splice(myLibrary.indexOf(element, 1));
+            renderPage();
+        })
 
         card.appendChild(cardTitle);
         card.appendChild(cardAuthor);
