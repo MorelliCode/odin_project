@@ -51,8 +51,8 @@ function renderPage(){
     myLibrary.forEach(element => {
         //create and add classes to card: card and the unique id
         const card = document.createElement("div");
-        card.classList.add("card")
-        card.classList.add(element.bookId)
+        card.classList.add("card");
+        card.dataset.id = element.bookId;
 
         //create, add class, set content, append to card
         const cardTitle = document.createElement("div");
@@ -61,12 +61,12 @@ function renderPage(){
         card.appendChild(cardTitle);
 
         const cardAuthor = document.createElement("div");
-        cardAuthor.classList.add("card-author")
+        cardAuthor.classList.add("card-author");
         cardAuthor.textContent = element.author;
         card.appendChild(cardAuthor);
 
         const cardPages = document.createElement("div");
-        cardPages.classList.add("card-pages")
+        cardPages.classList.add("card-pages");
         cardPages.textContent = element.numberPages + " pages";
         card.appendChild(cardPages);
 
@@ -87,7 +87,7 @@ function renderPage(){
         const cardRemoveBtn = document.createElement("button");
         cardRemoveBtn.textContent = "Remove";
         cardRemoveBtn.addEventListener("click", () => {
-            myLibrary.splice(myLibrary.indexOf(element, 1));
+            myLibrary.splice(myLibrary.indexOf(element), 1);
             renderPage();
         })
         card.appendChild(cardRemoveBtn);
