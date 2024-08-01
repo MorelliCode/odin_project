@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     box-sizing: border-box;
 }
 
@@ -55,7 +55,13 @@ form {
     width: 60px;
 }
 
-.form-button {
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-add,
+.form-cancel {
     align-self: center;
     justify-self: center;
     padding: 10px 20px;

@@ -1,4 +1,9 @@
 const libraryElement = document.querySelector(".library");
+const addBookBtn = document.querySelector("#newBookBtn");
+const dialog = document.querySelector("dialog");
+const addFormBtn = document.querySelector(".form-add");
+const cancelFormBtn = document.querySelector(".form-cancel");
+const addBookForm = document.querySelector(".inclusion-form");
 
 const myLibrary = [];
 
@@ -57,7 +62,7 @@ function renderPage(){
 
         cardTitle.textContent = element.title;
         cardAuthor.textContent = element.author;
-        cardPages.textContent = element.numberPages;
+        cardPages.textContent = element.numberPages + " pages";
         
         if (element.isRead == true) {
             cardRead.textContent = "Read";
@@ -91,3 +96,18 @@ function renderPage(){
     });
 
 }
+
+addBookBtn.addEventListener("click", () => {
+    dialog.showModal();
+})
+
+addFormBtn.addEventListener("click", () => {
+    addBook();
+    addBookForm.reset();
+    dialog.close();
+})
+
+cancelFormBtn.addEventListener("click", () => {
+    addBookForm.reset();
+    dialog.close();
+})
